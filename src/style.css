@@ -1,3 +1,7 @@
+:root {
+  --primary-blue: #00acdc;
+}
+
 body {
   margin: 0;
   box-sizing: border-box;
@@ -6,9 +10,8 @@ body {
   font-size: 12px;
 }
 
-header {
+.header {
   background-color: #fff;
-  height: 60px;
 }
 
 .container {
@@ -21,13 +24,14 @@ header {
 }
 
 .logo {
-  margin: 10px 0 10px 50px;
+  margin-bottom: 10px;
+  margin-left: 50px;
 }
 
 .nav {
   display: flex;
   list-style: none;
-  margin: 12px 0 13px;
+  margin-bottom: 13px;
   padding: 0;
 }
 
@@ -43,11 +47,15 @@ header {
   text-decoration: none;
   color: #000;
   text-transform: uppercase;
-  margin: 10px;
+  height: 60px;
 }
 
 .nav-link:hover {
-  color: #00acdc;
+  color: var(--primary-blue);
+}
+
+.nav__list + .nav__list .nav-link {
+  margin-left: 20px;
 }
 
 .nav__list:last-child .nav-link {
@@ -55,7 +63,8 @@ header {
 }
 
 .nav-link.is-active {
-  color: #00acdc;
+  color: var(--primary-blue);
+  position: relative;
 }
 
 .nav-link.is-active::after {
@@ -65,5 +74,5 @@ header {
   width: 37px;
   height: 4px;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--primary-blue);
 }
